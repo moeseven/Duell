@@ -1,0 +1,2 @@
+/BWizardry1/Temp/
+/Builds
