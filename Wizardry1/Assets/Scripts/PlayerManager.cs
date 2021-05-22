@@ -29,7 +29,6 @@ public class PlayerManager : NetworkBehaviour
 
         cards.Add(Card1);
         cards.Add(Card2);
-        Debug.Log(cards);
     }
 
     [Command]
@@ -40,6 +39,17 @@ public class PlayerManager : NetworkBehaviour
         RpcShowCard(card, "Dealt");
     }
 
+    public void PlayCard(GameObject card)
+    {
+        CmdPlayCard(card);
+    }
+
+    [Command]
+    void CmdPlayCard(GameObject card)
+    {
+        RpcShowCard(card, "Played");
+    }
+
     [ClientRpc]
     private void RpcShowCard(GameObject card, string type)
     {
@@ -48,15 +58,18 @@ public class PlayerManager : NetworkBehaviour
             if (hasAuthority)
             {
                 card.transform.SetParent(PlayerArea.transform, false);
+                card.GetComponent<CardFlipper>().ShowFront();
             }
             else
             {
                 card.transform.SetParent(EnemyArea.transform, false);
+                card.GetComponent<CardFlipper>().ShowBack();
             }
         }
         else if(type == "Played")
         {
-
+            card.transform.SetParent(DropZone.transform,false);
+            card.GetComponent<CardFlipper>().ShowFront();      
         }
     }
 }

@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 6506405868003516795}
   - component: {fileID: 6654636560278821531}
   - component: {fileID: -8645161747817749451}
+  - component: {fileID: -1000485997378535602}
+  - component: {fileID: 3457628736005003653}
   m_Layer: 8
   m_Name: Card2
   m_TagString: Untagged
@@ -71,7 +73,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b911576af3574f043904c76577a1be73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cad37be869f202c4d916f68cc850a269, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -93,8 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ce7debd150e0a4589fe2bad0ec8a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   Canvas: {fileID: 0}
-  DropZone: {fileID: 0}
+  PlayerManager: {fileID: 0}
 --- !u!114 &5179249584062624919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +128,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 3457628736005003653}
+          m_TargetAssemblyTypeName: CardZoom, Assembly-CSharp
+          m_MethodName: OnHoverExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 14
     callback:
       m_PersistentCalls:
@@ -131,6 +147,38 @@ MonoBehaviour:
         - m_Target: {fileID: 7995670132121841869}
           m_TargetAssemblyTypeName: DragDrop, Assembly-CSharp
           m_MethodName: EndDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3457628736005003653}
+          m_TargetAssemblyTypeName: CardZoom, Assembly-CSharp
+          m_MethodName: OnHoverEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3457628736005003653}
+          m_TargetAssemblyTypeName: CardZoom, Assembly-CSharp
+          m_MethodName: OnHoverExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -225,3 +273,33 @@ MonoBehaviour:
   compressRotation: 0
   interpolateScale: 1
   syncScale: 1
+--- !u!114 &-1000485997378535602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256522679456062726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a985ceabf94c4e64bbab099073a98a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardFront: {fileID: 21300000, guid: cad37be869f202c4d916f68cc850a269, type: 3}
+  CardBack: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &3457628736005003653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256522679456062726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922f5362b35fbba48890f7e656944098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  Canvas: {fileID: 0}
+  ZoomCard: {fileID: 5060602308879090281, guid: 9505ffbc7c383cd4a984e7d96b74ae11, type: 3}

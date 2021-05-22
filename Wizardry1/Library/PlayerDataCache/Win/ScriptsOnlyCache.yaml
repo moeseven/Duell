@@ -1,6 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CardFlipper
+    - CardZoom
     - DragDrop
     - DrawCard
     - PlayerManager
@@ -91,13 +93,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4748}
     - Class: 114
-      Script: {instanceID: 4958}
+      Script: {instanceID: 4944}
     - Class: 114
-      Script: {instanceID: 5108}
+      Script: {instanceID: 4960}
     - Class: 114
-      Script: {instanceID: 5470}
+      Script: {instanceID: 5110}
     - Class: 114
-      Script: {instanceID: 18046}
+      Script: {instanceID: 5472}
+    - Class: 114
+      Script: {instanceID: 21624}
+    - Class: 114
+      Script: {instanceID: 27328}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -393,7 +399,7 @@ ScriptsOnlyBuild:
     className: EnumerableTestState
   - hash:
       serializedVersion: 2
-      Hash: 7ccd1bce57bb2fa36b0632620f8b5dec
+      Hash: 44de987ce84b12f89de57c770862dbb8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DragDrop
@@ -1017,6 +1023,12 @@ ScriptsOnlyBuild:
     className: NetworkRigidbody2D
   - hash:
       serializedVersion: 2
+      Hash: 3ad6382617c540dc3fbe58f63d4c1b7a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerManager
+  - hash:
+      serializedVersion: 2
       Hash: fa657c3ec40e8c152d1d7938b1a10cd9
     assemblyName: Mirror.dll
     namespaceName: Mirror
@@ -1167,10 +1179,16 @@ ScriptsOnlyBuild:
     className: NetworkRoomPlayerExt
   - hash:
       serializedVersion: 2
-      Hash: 3ad6382617c540dc3fbe58f63d4c1b7a
+      Hash: 592a1672b0b600d35bad890f222bcc4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerManager
+    className: CardFlipper
+  - hash:
+      serializedVersion: 2
+      Hash: 39aff7f5378c76313d70aa974a95a1ca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CardZoom
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

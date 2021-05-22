@@ -59,6 +59,8 @@
     <Compile Include="Assets\Scripts\DrawCard.cs" />
     <Compile Include="Assets\Scripts\DragDrop.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\CardFlipper.cs" />
+    <Compile Include="Assets\Scripts\CardZoom.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
